@@ -2,7 +2,7 @@ import Header from "./Header";
 
 export default function Home() {
   return (
-    <div className="movie-bg relative">
+    <div className="movie-bg">
       <div className="relative z-10">
         <Header />
         <h1 className="leading-snug px-5 mx-auto max-w-5xl text-center mt-14 font-bold md:font-extrabold text-3xl md:text-4xl lg:text-5xl  sm:mt-24 lg:mt-32 lg:leading-tight">
