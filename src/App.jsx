@@ -1,5 +1,6 @@
+import Body from "./components/Body";
 function App() {
-  return <p className="">Hllo world</p>;
+  return <Body />;
 }
 
 export default App;

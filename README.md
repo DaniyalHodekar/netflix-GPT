@@ -17,5 +17,3 @@
 - GPTSearch
   - Search bar
   - MovieSuggestions
-
-[Google](https://google.com)
