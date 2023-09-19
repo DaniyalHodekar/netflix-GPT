@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 export default function Header() {
+  const loggedIn = useSelector((store) => store.user.user);
   return (
     <header className="px-6 md:px-8 pt-6">
       <div className="flex max-w-6xl mx-auto justify-between items-center ">
@@ -17,10 +18,10 @@ export default function Header() {
           </g>
         </svg>
         <Link
-          to={"/login"}
+          to={loggedIn ? "/browse" : "/login"}
           className="px-4 py-1.5 bg-red-600 text-white rounded text-sm font-medium hover:bg-red-700 transition-colors"
         >
-          Sign in
+          {loggedIn ? "Browse" : "Sign in"}
         </Link>
       </div>
     </header>
