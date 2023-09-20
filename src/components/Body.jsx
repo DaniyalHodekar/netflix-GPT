@@ -10,23 +10,25 @@ export default function Body() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
-
         dispatch(addUser(JSON.stringify(user)));
         navigate("/browse");
-
         // ...
       } else {
         // User is signed out
         // ...
         // console.log(user);
         dispatch(removeUser());
-        navigate("/");
+        navigate("/login");
       }
     });
+
+    return function () {
+      unsubscribe();
+    };
   }, []);
 
   return (

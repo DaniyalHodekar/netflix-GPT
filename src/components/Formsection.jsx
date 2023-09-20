@@ -54,16 +54,10 @@ export default function Formsection() {
             const user = userCredential.user;
             updateProfile(user, {
               displayName: nameRef?.current?.value,
-            })
-              .then(() => {
-                // Profile updated!
-                dispatch(addUser(JSON.stringify(user)));
-              })
-              .catch((error) => {
-                // An error occurred
-                // ...
-              });
-            // ...
+            }).then(() => {
+              // Profile updated!
+              dispatch(addUser(JSON.stringify(user)));
+            });
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -81,11 +75,6 @@ export default function Formsection() {
           emailRef.current.value,
           passRef.current.value
         )
-          .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            // ...
-          })
           .catch((error) => {
             const errorCode = error.code;
             errorRef.current.innerText = "Error: " + errorCode;
