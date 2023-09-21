@@ -5,6 +5,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Body from "./components/Body";
 import store from "./utils/appStore";
 import { Provider } from "react-redux";
+import MoviePage from "./components/MoviePage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "browse",
         element: <Browse />,
+      },
+      {
+        path: "movie/:id",
+        element: <MoviePage />,
       },
       {
         path: "login",

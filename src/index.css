@@ -28,15 +28,41 @@ body {
 
 .video-bg {
   background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8),
+    to top right,
+    rgb(0, 0, 0),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0)
   );
 }
 
-@media (max-width: 768px) {
+.bg-image {
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
   .video-bg {
     background-image: none;
   }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
 }

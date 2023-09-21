@@ -29,8 +29,8 @@ const VideoTitle = function ({ movie }) {
   }, [src]);
 
   return (
-    <div>
-      <div className="max-w-xl p-6 lg:p-12">
+    <div className="mt-2 md:mt-10 lg:my-auto">
+      <div className="max-w-xl px-6 lg:px-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 lg:whitespace-nowrap">
           {movie.original_title}
         </h2>
@@ -70,11 +70,11 @@ const VideoTitle = function ({ movie }) {
       </div>
       {src ? (
         <iframe
-          className="absolute top-0 w-full h-full -z-10 aspect-video"
+          className="absolute top-0 w-full h-full -z-10 bg-black"
           src={
             "https://www.youtube.com/embed/" +
             src +
-            "?&loop=1&autoplay=1&controls=0&disablekb=1&mute=1"
+            "?&loop=1&autoplay=0&controls=0&disablekb=1&mute=1"
           }
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
